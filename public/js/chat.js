@@ -108,3 +108,4 @@ document.getElementById('chatForm').addEventListener('submit', function(event) {
     document.getElementById('room').value = roomSelect; // Set room value to selected option
   }
 });
+
