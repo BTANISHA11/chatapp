@@ -4,28 +4,42 @@
     <meta charset="utf-8" />
     <meta
       name="viewport"
-      content="width=device-width, inital-scale=1, user-scalable=no"
+      content="width=device-width, initial-scale=1, user-scalable=no"
     />
     <link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/1380/1380370.png" type="image/x-icon">
     <link rel="stylesheet" href="/css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <title>Chatin | Chat</title>
+   
   </head>
-  <body class="centered-form">
+  <body>
     <div class="centered-form__form">
-      <form action="/chat.html">
-        <div class="form-field"><h3>Join Your Personal Chat room</h3></div>
+      <form id="chatForm" action="/chat.html">
+        <div class="form-field"><h3>Join Your Personal Chat Room</h3></div>
         <div class="form-field">
-          <label>Display Name</label>
-          <input type="text" name="name" autofocus />
+          <label for="name">Display Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your display name" autofocus required />
         </div>
         <div class="form-field">
-          <label>Room Name</label>
-          <input type="text" name="room" autofocus />
+          <label for="room">Room Name</label>
+          <input type="text" id="room" name="room" placeholder="Enter room name" required />
         </div>
         <div class="form-field">
-          <button>Join</button>
+          <label for="roomSelect">Or Select Room</label>
+          <select id="roomSelect" name="roomSelect">
+            <option value="">Choose a room</option>
+            <option value="General">General</option>
+            <option value="Tech">Tech</option>
+            <option value="Gaming">Gaming</option>
+            <option value="Music">Music</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <button type="submit">Join Chat</button>
         </div>
       </form>
     </div>
+
+    
   </body>
 </html>

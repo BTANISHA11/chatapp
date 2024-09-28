@@ -95,3 +95,16 @@ document.querySelector('#send-location').addEventListener('click', function(e) {
     alert('Unable to fetch location.')
   })
 });
+
+document.getElementById('chatForm').addEventListener('submit', function(event) {
+  const name = document.getElementById('name').value;
+  const room = document.getElementById('room').value;
+  const roomSelect = document.getElementById('roomSelect').value;
+
+  if (!name || (!room && !roomSelect)) {
+    event.preventDefault();
+    alert('Please fill in both fields before joining a chat room.');
+  } else if (!room) {
+    document.getElementById('room').value = roomSelect; // Set room value to selected option
+  }
+});
